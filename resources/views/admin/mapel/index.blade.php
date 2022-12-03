@@ -1,7 +1,7 @@
 @extends('template_backend.home')
-@section('heading', 'Data Mapel')
+@section('heading', 'Data Mata Kuliah')
 @section('page')
-  <li class="breadcrumb-item active">Data Mapel</li>
+  <li class="breadcrumb-item active">Data Mata Kuliah</li>
 @endsection
 @section('content')
 <div class="col-md-12">
@@ -9,7 +9,7 @@
         <div class="card-header">
             <h3 class="card-title">
                 <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target=".tambah-mapel">
-                    <i class="nav-icon fas fa-folder-plus"></i> &nbsp; Tambah Data Mapel
+                    <i class="nav-icon fas fa-folder-plus"></i> &nbsp; Tambah Data Mata Kuliah
                 </button>
             </h3>
         </div>

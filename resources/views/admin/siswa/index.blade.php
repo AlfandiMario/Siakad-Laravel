@@ -1,7 +1,7 @@
 @extends('template_backend.home')
-@section('heading', 'Data Siswa')
+@section('heading', 'Data Mahasiswa')
 @section('page')
-  <li class="breadcrumb-item active">Data Siswa</li>
+  <li class="breadcrumb-item active">Data Mahasiswa</li>
 @endsection
 @section('content')
 <div class="col-md-12">
@@ -9,7 +9,7 @@
         <div class="card-header">
             <h3 class="card-title">
                 <button type="button" class="btn btn-default btn-sm" data-toggle="modal" data-target=".bd-example-modal-lg">
-                    <i class="nav-icon fas fa-folder-plus"></i> &nbsp; Tambah Data Siswa
+                    <i class="nav-icon fas fa-folder-plus"></i> &nbsp; Tambah Data Mahasiswa
                 </button>
                 <a href="{{ route('siswa.export_excel') }}" class="btn btn-success btn-sm my-3" target="_blank"><i class="nav-icon fas fa-file-export"></i> &nbsp; EXPORT EXCEL</a>
                 <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#importExcel">
