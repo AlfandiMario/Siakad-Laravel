@@ -1,5 +1,5 @@
 @extends('template_backend.home')
-@section('heading', 'Edit Mapel')
+@section('heading', 'Edit Mata Kuliah')
 @section('page')
   <li class="breadcrumb-item active"><a href="{{ route('mapel.index') }}">Mapel</a></li>
   <li class="breadcrumb-item active">Edit Mapel</li>
@@ -9,7 +9,7 @@
     <!-- general form elements -->
     <div class="card card-primary">
       <div class="card-header">
-        <h3 class="card-title">Edit Data Mapel</h3>
+        <h3 class="card-title">Edit Data Mata Kuliah</h3>
       </div>
       <!-- /.card-header -->
       <!-- form start -->
@@ -20,13 +20,13 @@
             <div class="col-md-12">
                 <input type="hidden" name="mapel_id" value="{{ $mapel->id }}">
                 <div class="form-group">
-                  <label for="nama_mapel">Nama Mapel</label>
-                  <input type="text" id="nama_mapel" name="nama_mapel" value="{{ $mapel->nama_mapel }}" class="form-control @error('nama_mapel') is-invalid @enderror" placeholder="{{ __('Nama Mata Pelajaran') }}">
+                  <label for="nama_mapel">Nama Mata Kuliah</label>
+                  <input type="text" id="nama_mapel" name="nama_mapel" value="{{ $mapel->nama_mapel }}" class="form-control @error('nama_mapel') is-invalid @enderror" placeholder="{{ __('Nama Mata Kuliah') }}">
                 </div>
                 <div class="form-group">
                   <label for="paket_id">Paket</label>
                   <select id="paket_id" name="paket_id" class="form-control @error('paket_id') is-invalid @enderror select2bs4">
-                    <option value="">-- Pilih Paket Mapel --</option>
+                    <option value="">-- Pilih Paket Mata Kuliah --</option>
                     <option value="9"
                         @if ($mapel->paket_id == '9')
                             selected
@@ -44,22 +44,22 @@
                 <div class="form-group">
                     <label for="kelompok">Kelompok</label>
                     <select id="kelompok" name="kelompok" class="select2bs4 form-control @error('kelompok') is-invalid @enderror">
-                        <option value="">-- Pilih Kelompok Mapel --</option>
+                        <option value="">-- Pilih Kelompok Mata Kuliah --</option>
                         <option value="A"
                             @if ($mapel->kelompok == 'A')
                                 selected
                             @endif
-                        >Pelajaran Umum</option>
+                        >Mata Kuliah Umum</option>
                         <option value="B"
                             @if ($mapel->kelompok == 'B')
                                 selected
                             @endif
-                        >Pelajaran Khusus</option>
+                        >Mata Kuliah Khusus</option>
                         <option value="C"
                             @if ($mapel->kelompok == 'C')
                                 selected
                             @endif
-                        >Pelajaran Keahlian</option>
+                        >Mata Kuliah Keahlian</option>
                     </select>
                 </div>
             </div>
