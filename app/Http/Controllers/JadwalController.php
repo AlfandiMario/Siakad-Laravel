@@ -213,6 +213,8 @@ class JadwalController extends Controller
         $siswa = Siswa::where('no_induk', Auth::user()->no_induk)->first();
         $kelas = Kelas::findorfail($siswa->kelas_id);
         $jadwal = Jadwal::orderBy('hari_id')->OrderBy('jam_mulai')->where('kelas_id', $kelas->id)->get();
+        // dd($jadwal);
+
         return view('siswa.jadwal', compact('jadwal', 'kelas', 'siswa'));
     }
 

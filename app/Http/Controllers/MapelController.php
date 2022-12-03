@@ -19,9 +19,10 @@ class MapelController extends Controller
      */
     public function index()
     {
-        $mapel = Mapel::OrderBy('kelompok', 'asc')->OrderBy('nama_mapel', 'asc')->get();
-        $paket = Paket::all();
-        return view('admin.mapel.index', compact('mapel', 'paket'));
+        // $mapel = Mapel::OrderBy('kelompok', 'asc')->OrderBy('nama_mapel', 'asc')->get();
+        $mapel = Mapel::daftarmakul();
+        // $pengampu = Guru::where('mapel_id.guru')
+        return view('admin.mapel.index', compact('mapel'));
     }
 
     /**

@@ -10,11 +10,18 @@ class Mapel extends Model
 {
     use SoftDeletes;
 
-    protected $fillable = ['id', 'nama_mapel', 'paket_id', 'kelompok'];
+    // protected $fillable = ['id', 'nama_mapel', 'paket_id', 'kelompok'];
+    protected $guarded = [];
+    protected $table = 'mapel';
 
     public function paket()
     {
         return $this->belongsTo('App\Paket')->withDefault();
+    }
+
+    public function guru()
+    {
+        return $this->belongsTo('App\Guru');
     }
 
     public function sikap($id)
@@ -31,5 +38,8 @@ class Mapel extends Model
         return $sikap;
     }
 
-    protected $table = 'mapel';
+    public function scopeDaftarmakul()
+    {
+        return Mapel::join("guru", "guru.mapel_id", "=", "mapel.id")->get();
+    }
 }

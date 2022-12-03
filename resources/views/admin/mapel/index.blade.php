@@ -19,23 +19,20 @@
             <thead>
                 <tr>
                     <th>No.</th>
-                    <th>Nama Mapel</th>
-                    <th>Paket</th>
-                    <th>Kelompok</th>
+                    <th>Kode</th>
+                    <th>Nama Mata Kuliah</th>
+                    <th>Pengampu</th>
                     <th>Aksi</th>
                 </tr>
             </thead>
             <tbody>
-                @foreach ($mapel as $result => $data)
+                @foreach ($mapel as $data)
                 <tr>
                     <td>{{ $loop->iteration }}</td>
+                    <td>{{ $data->kode }}</td>
                     <td>{{ $data->nama_mapel }}</td>
-                    @if ( $data->paket_id == 9 )
-                      <td>{{ 'Semua' }}</td>
-                    @else
-                      <td>{{ $data->paket->ket }}</td>
-                    @endif
-                    <td>{{ $data->kelompok }}</td>
+                    <td>{{ $data->nama_guru}}</td>
+                    {{-- @dd($data) --}}
                     <td>
                         <form action="{{ route('mapel.destroy', $data->id) }}" method="post">
                             @csrf
@@ -70,28 +67,23 @@
           @csrf
             <div class="row">
               <div class="col-md-12">
+                
                 <div class="form-group">
                   <label for="nama_mapel">Nama Mapel</label>
-                  <input type="text" id="nama_mapel" name="nama_mapel" class="form-control @error('nama_mapel') is-invalid @enderror" placeholder="{{ __('Nama Mata Pelajaran') }}">
+                  <input type="text" id="nama_mapel" name="nama_mapel" class="form-control @error('nama_mapel') is-invalid @enderror" placeholder="{{ __('Nama Mata Kuliah') }}">
                 </div>
                 <div class="form-group">
-                  <label for="paket_id">Paket</label>
-                  <select id="paket_id" name="paket_id" class="form-control @error('paket_id') is-invalid @enderror select2bs4">
-                    <option value="">-- Pilih Paket Mapel --</option>
-                    <option value="9">Semua</option>
-                    @foreach ($paket as $data)
-                      <option value="{{ $data->id }}">{{ $data->ket }}</option>
+                  <label for="kode_mapel">Kode Mapel</label>
+                  <input type="text" id="kode_mapel" name="kode_mapel" class="form-control @error('kode_mapel') is-invalid @enderror" placeholder="{{ __('Kode Mata Kuliah') }}">
+                </div>
+                <div class="form-group">
+                  <label for="nama_guru">Dosen Pengampu</label>
+                  <select id="nama_guru" name="nama_guru" class="form-control @error('nama_guru') is-invalid @enderror select2bs4">
+                    <option value="">-- Pilih Pengampu --</option>
+                    @foreach ($mapel as $data)
+                      <option value="{{ $data->id }}">{{ $data->nama_guru }}</option>
                     @endforeach
                   </select>
-                </div>
-                <div class="form-group">
-                    <label for="kelompok">Kelompok</label>
-                    <select id="kelompok" name="kelompok" class="select2bs4 form-control @error('kelompok') is-invalid @enderror">
-                      <option value="">-- Pilih Kelompok Mapel --</option>
-                      <option value="A">Pelajaran Umum</option>
-                      <option value="B">Pelajaran Khusus</option>
-                      <option value="C">Pelajaran Keahlian</option>
-                    </select>
                 </div>
               </div>
             </div>
