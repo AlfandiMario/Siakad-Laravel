@@ -1,15 +1,15 @@
 @extends('template_backend.home')
-@section('heading', 'Edit Guru')
+@section('heading', 'Edit Dosen')
 @section('page')
-  <li class="breadcrumb-item active"><a href="{{ route('guru.index') }}">Guru</a></li>
-  <li class="breadcrumb-item active">Edit Guru</li>
+  <li class="breadcrumb-item active"><a href="{{ route('guru.index') }}">Dosen</a></li>
+  <li class="breadcrumb-item active">Edit Dosen</li>
 @endsection
 @section('content')
 <div class="col-md-12">
     <!-- general form elements -->
     <div class="card card-primary">
       <div class="card-header">
-        <h3 class="card-title">Edit Data Guru</h3>
+        <h3 class="card-title">Edit Data Dosen</h3>
       </div>
       <!-- /.card-header -->
       <!-- form start -->
@@ -20,13 +20,13 @@
           <div class="row">
             <div class="col-md-6">
                 <div class="form-group">
-                    <label for="nama_guru">Nama Guru</label>
+                    <label for="nama_guru">Nama Dosen</label>
                     <input type="text" id="nama_guru" name="nama_guru" value="{{ $guru->nama_guru }}" class="form-control @error('nama_guru') is-invalid @enderror">
                 </div>
                 <div class="form-group">
-                    <label for="mapel_id">Mapel</label>
+                    <label for="mapel_id">Mata Kuliah</label>
                     <select id="mapel_id" name="mapel_id" class="select2bs4 form-control @error('mapel_id') is-invalid @enderror">
-                        <option value="">-- Pilih Mapel --</option>
+                        <option value="">-- Pilih Mata Kuliah --</option>
                         @foreach ($mapel as $data)
                             <option value="{{ $data->id }}"
                                 @if ($guru->mapel_id == $data->id)

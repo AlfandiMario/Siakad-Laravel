@@ -88,7 +88,7 @@
                         <td>{{ $loop->iteration }}</td>
                         <td>{{ $data->nama_mapel }}</td>
                         <td>
-                            <a href="{{ route('guru.mapel', Crypt::encrypt($data->id)) }}" class="btn btn-info btn-sm"><i class="nav-icon fas fa-search-plus"></i> &nbsp; Ditails</a>
+                            <a href="{{ route('guru.mapel', Crypt::encrypt($data->id)) }}" class="btn btn-info btn-sm"><i class="nav-icon fas fa-search-plus"></i> &nbsp; Details</a>
                         </td>
                     </tr>
                 @endforeach
@@ -103,7 +103,7 @@
     <div class="modal-dialog modal-lg" role="document">
       <div class="modal-content">
       <div class="modal-header">
-          <h4 class="modal-title">Tambah Data Guru</h4>
+          <h4 class="modal-title">Tambah Data Dosen</h4>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
           </button>
@@ -114,7 +114,7 @@
             <div class="row">
                 <div class="col-md-6">
                     <div class="form-group">
-                        <label for="nama_guru">Nama Guru</label>
+                        <label for="nama_guru">Nama Dosen</label>
                         <input type="text" id="nama_guru" name="nama_guru" class="form-control @error('nama_guru') is-invalid @enderror">
                     </div>
                     <div class="form-group">
@@ -144,9 +144,9 @@
                         <input type="text" id="nip" name="nip" onkeypress="return inputAngka(event)" class="form-control @error('nip') is-invalid @enderror">
                     </div>
                     <div class="form-group">
-                        <label for="mapel_id">Mapel</label>
+                        <label for="mapel_id">Mata Kuliah</label>
                         <select id="mapel_id" name="mapel_id" class="select2bs4 form-control @error('mapel_id') is-invalid @enderror">
-                            <option value="">-- Pilih Mapel --</option>
+                            <option value="">-- Pilih Mata Kuliah --</option>
                             @foreach ($mapel as $data)
                                 <option value="{{ $data->id }}">{{ $data->nama_mapel }}</option>
                             @endforeach

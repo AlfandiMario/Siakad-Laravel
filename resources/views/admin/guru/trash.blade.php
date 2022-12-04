@@ -1,13 +1,13 @@
 @extends('template_backend.home')
-@section('heading', 'Trash Guru')
+@section('heading', 'Trash Dosen')
 @section('page')
-  <li class="breadcrumb-item active">Trash Guru</li>
+  <li class="breadcrumb-item active">Trash Dosen</li>
 @endsection
 @section('content')
 <div class="col-md-12">
     <div class="card card-primary">
         <div class="card-header">
-          <h3 class="card-title">Trash Data Guru</h3>
+          <h3 class="card-title">Trash Data Dosen</h3>
         </div>
         <!-- /.card-header -->
         <div class="card-body">
@@ -15,9 +15,9 @@
             <thead>
                 <tr>
                     <th>No.</th>
-                    <th>Nama Guru</th>
+                    <th>Nama Dosen</th>
                     <th>Id Card</th>
-                    <th>Guru Mapel</th>
+                    <th>Dosen Mata Kuliah</th>
                     <th>Foto</th>
                     <th>Aksi</th>
                 </tr>

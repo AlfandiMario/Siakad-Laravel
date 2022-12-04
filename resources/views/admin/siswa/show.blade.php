@@ -1,9 +1,9 @@
 @extends('template_backend.home')
 @section('heading')
-  Data Siswa {{ $kelas->nama_kelas }}
+  Data Mahasiswa {{ $kelas->nama_kelas }}
 @endsection
 @section('page')
-  <li class="breadcrumb-item active"><a href="{{ route('siswa.index') }}">Siswa</a></li>
+  <li class="breadcrumb-item active"><a href="{{ route('siswa.index') }}">Mahasiswa</a></li>
   <li class="breadcrumb-item active">{{ $kelas->nama_kelas }}</li>
 @endsection
 @section('content')
@@ -18,7 +18,7 @@
             <thead>
                 <tr>
                     <th>No.</th>
-                    <th>Nama Siswa</th>
+                    <th>Nama Mahasiswa</th>
                     <th>No Induk</th>
                     <th>Foto</th>
                     <th>Aksi</th>

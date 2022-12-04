@@ -1,9 +1,9 @@
 @extends('template_backend.home')
 @section('heading')
-  Data Guru {{ $mapel->nama_mapel }}
+  Data Dosen {{ $mapel->nama_mapel }}
 @endsection
 @section('page')
-  <li class="breadcrumb-item active"><a href="{{ route('guru.index') }}">Guru</a></li>
+  <li class="breadcrumb-item active"><a href="{{ route('guru.index') }}">Dosen</a></li>
   <li class="breadcrumb-item active">{{ $mapel->nama_mapel }}</li>
 @endsection
 @section('content')

@@ -18,7 +18,7 @@
                     <th>Hari</th>
                     <th>Jadwal</th>
                     <th>Kelas</th>
-                    <th>Jam Pelajaran</th>
+                    <th>Jam Kuliah</th>
                     <th>Ruang Kelas</th>
                     <th>Aksi</th>
                 </tr>

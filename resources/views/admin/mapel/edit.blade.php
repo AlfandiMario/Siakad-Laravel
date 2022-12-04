@@ -1,8 +1,8 @@
 @extends('template_backend.home')
 @section('heading', 'Edit Mata Kuliah')
 @section('page')
-  <li class="breadcrumb-item active"><a href="{{ route('mapel.index') }}">Mapel</a></li>
-  <li class="breadcrumb-item active">Edit Mapel</li>
+  <li class="breadcrumb-item active"><a href="{{ route('mapel.index') }}">Mata Kuliah</a></li>
+  <li class="breadcrumb-item active">Edit Mata Kuliah</li>
 @endsection
 @section('content')
 <div class="col-md-12">

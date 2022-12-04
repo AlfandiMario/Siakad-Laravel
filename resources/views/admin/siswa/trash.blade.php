@@ -1,13 +1,13 @@
 @extends('template_backend.home')
-@section('heading', 'Trash Siswa')
+@section('heading', 'Trash Mahasiswa')
 @section('page')
-  <li class="breadcrumb-item active">Trash Siswa</li>
+  <li class="breadcrumb-item active">Trash Mahasiswa</li>
 @endsection
 @section('content')
 <div class="col-md-12">
     <div class="card card-primary">
         <div class="card-header">
-          <h3 class="card-title">Trash Data Siswa</h3>
+          <h3 class="card-title">Trash Data Mahasiswa</h3>
         </div>
         <!-- /.card-header -->
         <div class="card-body">
@@ -15,7 +15,7 @@
             <thead>
                 <tr>
                     <th>No.</th>
-                    <th>Nama Siswa</th>
+                    <th>Nama Mahasiswa</th>
                     <th>Nomor Induk</th>
                     <th>Kelas</th>
                     <th>Foto</th>

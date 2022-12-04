@@ -46,7 +46,7 @@
                 </select>
               </div>
               <div class="form-group">
-                <label for="guru_id">Kode Mapel</label>
+                <label for="guru_id">Kode Mata Kuliah</label>
                 <select id="guru_id" name="guru_id" class="form-control @error('guru_id') is-invalid @enderror select2bs4">
                   <option value="" @if ($jadwal->guru_id)
                     selected

@@ -1,7 +1,7 @@
 @extends('template_backend.home')
-@section('heading', 'Absensi Guru')
+@section('heading', 'Absensi Dosen')
 @section('page')
-    <li class="breadcrumb-item active"><a href="{{ route('guru.absensi') }}">Absensi guru</a></li>
+    <li class="breadcrumb-item active"><a href="{{ route('guru.absensi') }}">Absensi Dosen</a></li>
     <li class="breadcrumb-item active">{{ $guru->nama_guru }}</li>
 @endsection
 @section('content')

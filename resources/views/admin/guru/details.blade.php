@@ -1,8 +1,8 @@
 @extends('template_backend.home')
-@section('heading', 'Details Guru')
+@section('heading', 'Details Dosen')
 @section('page')
-  <li class="breadcrumb-item active"><a href="{{ route('guru.index') }}">Guru</a></li>
-  <li class="breadcrumb-item active">Details Guru</li>
+  <li class="breadcrumb-item active"><a href="{{ route('guru.index') }}">Dosen</a></li>
+  <li class="breadcrumb-item active">Details Dosen</li>
 @endsection
 @section('content')
 <div class="col-md-12">
@@ -20,7 +20,7 @@
                     <h5 class="card-title card-text mb-2">Nama : {{ $guru->nama_guru }}</h5>
                     <h5 class="card-title card-text mb-2">NIP : {{ $guru->nip }}</h5>
                     <h5 class="card-title card-text mb-2">No Id Card : {{ $guru->id_card }}</h5>
-                    <h5 class="card-title card-text mb-2">Guru Mapel : {{ $guru->mapel->nama_mapel }}</h5>
+                    <h5 class="card-title card-text mb-2">Guru Mata Kuliah : {{ $guru->mapel->nama_mapel }}</h5>
                     <h5 class="card-title card-text mb-2">Kode Jadwal : {{ $guru->kode }}</h5>
                     @if ($guru->jk == 'L')
                         <h5 class="card-title card-text mb-2">Jenis Kelamin : Laki-laki</h5>

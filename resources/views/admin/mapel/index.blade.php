@@ -57,7 +57,7 @@
   <div class="modal-dialog modal-md" role="document">
     <div class="modal-content">
     <div class="modal-header">
-        <h4 class="modal-title">Tambah Data Mapel</h4>
+        <h4 class="modal-title">Tambah Data Mata Kuliah</h4>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
         <span aria-hidden="true">&times;</span>
         </button>
@@ -69,11 +69,11 @@
               <div class="col-md-12">
                 
                 <div class="form-group">
-                  <label for="nama_mapel">Nama Mapel</label>
+                  <label for="nama_mapel">Nama Mata Kuliah</label>
                   <input type="text" id="nama_mapel" name="nama_mapel" class="form-control @error('nama_mapel') is-invalid @enderror" placeholder="{{ __('Nama Mata Kuliah') }}">
                 </div>
                 <div class="form-group">
-                  <label for="kode_mapel">Kode Mapel</label>
+                  <label for="kode_mapel">Kode Mata Kuliah</label>
                   <input type="text" id="kode_mapel" name="kode_mapel" class="form-control @error('kode_mapel') is-invalid @enderror" placeholder="{{ __('Kode Mata Kuliah') }}">
                 </div>
                 <div class="form-group">

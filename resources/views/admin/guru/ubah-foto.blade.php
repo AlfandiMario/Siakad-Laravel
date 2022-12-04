@@ -1,7 +1,7 @@
 @extends('template_backend.home')
 @section('heading', 'Ubah Foto')
 @section('page')
-  <li class="breadcrumb-item active"><a href="{{ route('guru.index') }}">Guru</a></li>
+  <li class="breadcrumb-item active"><a href="{{ route('guru.index') }}">Dosen</a></li>
   <li class="breadcrumb-item active">Ubah Foto</li>
 @endsection
 @section('content')
@@ -26,7 +26,7 @@
             <div class="row">
                 <div class="col-md-6">
                     <div class="form-group">
-                        <label for="nama_guru">Nama Guru</label>
+                        <label for="nama_guru">Nama Dosen</label>
                         <input type="text" name="nama_guru" class="form-control" value="{{ $guru->nama_guru }}" readonly>
                     </div>
                     <div class="form-group">

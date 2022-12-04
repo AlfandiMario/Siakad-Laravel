@@ -1,15 +1,15 @@
 @extends('template_backend.home')
-@section('heading', 'Edit Siswa')
+@section('heading', 'Edit Mahasiswa')
 @section('page')
-  <li class="breadcrumb-item active"><a href="{{ route('siswa.index') }}">Siswa</a></li>
-  <li class="breadcrumb-item active">Edit Siswa</li>
+  <li class="breadcrumb-item active"><a href="{{ route('siswa.index') }}">Mahasiswa</a></li>
+  <li class="breadcrumb-item active">Edit Mahasiswa</li>
 @endsection
 @section('content')
 <div class="col-md-12">
     <!-- general form elements -->
     <div class="card card-primary">
       <div class="card-header">
-        <h3 class="card-title">Edit Data Siswa</h3>
+        <h3 class="card-title">Edit Data Mahasiswa</h3>
       </div>
       <!-- /.card-header -->
       <!-- form start -->

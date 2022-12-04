@@ -21,7 +21,7 @@
         <div class="small-box bg-warning">
             <div class="inner" style="color: #FFFFFF;">
                 <h3>{{ $guru }}</h3>
-                <p>Guru</p>
+                <p>Dosen</p>
             </div>
             <div class="icon">
                 <i class="fas fa-id-card nav-icon"></i>
@@ -33,7 +33,7 @@
         <div class="small-box bg-success">
             <div class="inner">
                 <h3>{{ $siswa }}</h3>
-                <p>Siswa</p>
+                <p>Mahasiswa</p>
             </div>
             <div class="icon">
                 <i class="fas fa-id-card nav-icon"></i>
@@ -57,7 +57,7 @@
         <div class="small-box bg-primary">
             <div class="inner">
                 <h3>{{ $mapel }}</h3>
-                <p>Mapel</p>
+                <p>Mata Kuliah</p>
             </div>
             <div class="icon">
                 <i class="fas fa-book nav-icon"></i>
@@ -82,7 +82,7 @@
             <div class="card-body">
                 <div class="d-flex">
                     <p class="d-flex flex-column">
-                        <span class="text-bold text-lg">DataGuru</span>
+                        <span class="text-bold text-lg">Data Dosen</span>
                     </p>
                     <p class="ml-auto d-flex flex-column text-right">
                         <span class="text-success">
@@ -113,7 +113,7 @@
             <div class="card-body">
                 <div class="d-flex">
                     <p class="d-flex flex-column">
-                        <span class="text-bold text-lg">Data Siswa</span>
+                        <span class="text-bold text-lg">Data Mahasiswa</span>
                     </p>
                     <p class="ml-auto d-flex flex-column text-right">
                         <span class="text-success">

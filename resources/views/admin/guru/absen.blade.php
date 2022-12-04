@@ -1,7 +1,7 @@
 @extends('template_backend.home')
-@section('heading', 'Absensi Guru')
+@section('heading', 'Absensi Dosen')
 @section('page')
-    <li class="breadcrumb-item active">Absensi guru</li>
+    <li class="breadcrumb-item active">Absensi Dosen</li>
 @endsection
 @section('content')
 <div class="col-md-12">
@@ -11,7 +11,7 @@
             <thead>
                 <tr>
                     <th>No.</th>
-                    <th>Nama Guru</th>
+                    <th>Nama Dosen</th>
                     <th>Cek Absensi</th>
                 </tr>
             </thead>
@@ -21,7 +21,7 @@
                         <td>{{ $loop->iteration }}</td>
                         <td>{{ $data->nama_guru }}</td>
                         <td>
-                            <a href="{{ route('guru.kehadiran', Crypt::encrypt($data->id)) }}" class="btn btn-info btn-sm"><i class="nav-icon fas fa-search-plus"></i> &nbsp; Ditails</a>
+                            <a href="{{ route('guru.kehadiran', Crypt::encrypt($data->id)) }}" class="btn btn-info btn-sm"><i class="nav-icon fas fa-search-plus"></i> &nbsp; Details</a>
                         </td>
                     </tr>
                 @endforeach
